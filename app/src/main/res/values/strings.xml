@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">My Baking App</string>
+    <string name="title_item_detail">Item Detail</string>
+    <string name="recipe_ing_multiple">%d ingredients</string>
+    <string name="recipe_ing_single">%d ingredient</string>
+    <string name="recipe_step_multiple">%d steps</string>
+    <string name="recipe_step_single">%d step</string>
+    <string name="recipe_serving_multiple">Serving for %d portions</string>
+    <string name="recipe_serving_single">Serving for %d portion</string>
+    <string name="contoh_langkah">Contoh Langkah</string>
+    <string name="contoh_penyajian">Contoh Penyajian</string>
+    <string name="contoh_ingredient">Contoh Ingredient</string>
+    <string name="contoh_judul">Contoh Judul</string>
+    <string name="default_adapter_recipes_image">Default Adapter Recipes Image</string>
+    <string name="adapter_step_examp_title">Step Example Title</string>
+    <string name="adapter_step_image_recipe">Adapter Step Image Recipe</string>
+    <string name="example_ingredient">- Example Ingredient</string>
+    <string name="steps">Steps</string>
+    <string name="nav_prev_step">Prev Step</string>
+    <string name="nav_next_step">Next Step</string>
+    <string name="main_progress_title">Waiting Data</string>
+    <string name="main_error_title">Check Connection</string>
+    <string name="main_error_icon_desc">Network Problem</string>
+    <string name="ingredients">Ingredient :</string>
+    <string name="exam_ingredient">- Example Ingredient</string>
+    <string name="image_default">Image Default</string>
+    <string name="example_title">Example Title</string>
+    <string name="err_widget">Try Again</string>
+    <string name="widget_ingredients_title">Ingredient of %s</string>
+</resources>

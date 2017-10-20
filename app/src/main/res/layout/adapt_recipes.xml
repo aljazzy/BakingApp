@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/adapt_rec_cview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="8dp"
+    android:clickable="true"
+    app:cardCornerRadius="8dp"
+    app:cardUseCompatPadding="true"
+    app:contentPadding="8dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/adapt_rec_image"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/darker_gray"
+            android:contentDescription="@string/default_adapter_recipes_image"
+            android:scaleType="centerInside"
+            android:src="@mipmap/ic_logo"/>
+        <TextView
+            android:id="@+id/adapt_rec_title"
+            style="?android:textAppearanceLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/contoh_judul"/>
+        <TextView
+            android:id="@+id/adapt_rec_ingredient"
+            style="?android:textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/contoh_ingredient"/>
+        <TextView
+            android:id="@+id/adapt_rec_step"
+            style="?android:textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/contoh_langkah" />
+
+        <TextView
+            android:id="@+id/adapt_rec_serving"
+            style="?android:textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/contoh_penyajian" />
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
