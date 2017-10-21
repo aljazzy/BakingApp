@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.RequestOptions;
+import com.jatmiko.juli.bakingapp.model.Step;
 
 /**
  * Created by Miko on 09/10/2017.
@@ -16,6 +17,9 @@ import com.bumptech.glide.request.RequestOptions;
 
 public class Constant {
     public static class Data {
+        public static final String AUTOPLAY = "autoplay";
+        public static final String CURRENT_WINDOW_INDEX = "current_windows_index";
+        public static final String PLAYBACK_POSITION = "playback_position";
         public static final String LIST_STATE = "list_state";
         public static final String LIST_DATA = "list_data";
         public static final String LIST_NEED_LOADING = "list_need_loading";

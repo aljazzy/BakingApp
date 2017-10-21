@@ -35,10 +35,13 @@ import org.greenrobot.eventbus.EventBus;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+import static com.jatmiko.juli.bakingapp.utility.Constant.Data.AUTOPLAY;
+import static com.jatmiko.juli.bakingapp.utility.Constant.Data.CURRENT_WINDOW_INDEX;
 import static com.jatmiko.juli.bakingapp.utility.Constant.Data.EXTRA_STEP;
 import static com.jatmiko.juli.bakingapp.utility.Constant.Data.EXTRA_STEP_FIRST;
 import static com.jatmiko.juli.bakingapp.utility.Constant.Data.EXTRA_STEP_LAST;
 import static com.jatmiko.juli.bakingapp.utility.Constant.Data.EXTRA_STEP_NUMBER;
+import static com.jatmiko.juli.bakingapp.utility.Constant.Data.PLAYBACK_POSITION;
 
 /**
  * Created by Miko on 18/10/2017.
@@ -96,6 +99,12 @@ public class StepDetailFragment extends Fragment implements View.OnClickListener
 
         if (First) mDetailStepPrev.setVisibility(View.GONE);
         if (Last) mDetailStepNext.setVisibility(View.GONE);
+
+        if (savedInstanceState != null) {
+            mPlaybackPosition = savedInstanceState.getLong(PLAYBACK_POSITION, 0);
+            mCurrentWindow = savedInstanceState.getInt(CURRENT_WINDOW_INDEX, 0);
+            mPlayWhenReady = savedInstanceState.getBoolean(AUTOPLAY, true);
+        }
 
         return rootView;
     }
@@ -206,6 +215,16 @@ public class StepDetailFragment extends Fragment implements View.OnClickListener
         EventRecipeStep event = new EventRecipeStep();
         event.setSelectedPosition(mNumber + 1);
         eventBus.post(event);
+    }
+    @Override
+    public void onSaveInstanceState(Bundle outState){
+        super.onSaveInstanceState(outState);
+        if (mPlayer == null) {
+            outState.putInt(CURRENT_WINDOW_INDEX, mCurrentWindow);
+            outState.putBoolean(AUTOPLAY, mPlayWhenReady);
+            outState.putLong(PLAYBACK_POSITION, mPlaybackPosition);
+        }
+
     }
 }
 
