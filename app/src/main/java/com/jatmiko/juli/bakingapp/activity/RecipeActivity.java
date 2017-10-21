@@ -90,7 +90,7 @@ public class RecipeActivity extends AppCompatActivity{
         fragment.setArguments(bundle);
 
         if (isTwoPanel)
-            fragmentManager.beginTransaction().replace(R.id.fragment, fragment).commit();
+            fragmentManager.beginTransaction().replace(R.id.recipe_fragment, fragment).commit();
         else fragmentManager.beginTransaction().replace(R.id.recipe_fragment, fragment).commit();
         mIsRecipeMenu = true;
     }
